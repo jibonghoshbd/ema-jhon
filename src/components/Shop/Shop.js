@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
 const Shop = () => {
@@ -10,7 +11,9 @@ const Shop = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
-
+    const addProductToCart = product => {
+        console.log(product)
+    }
     return (
         <div className='shop-container'>
             <div className="product-container">
@@ -22,8 +25,7 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <h1>Order Summary</h1>
-                <h3>Items Orders: </h3>
+                <Cart addProductToCart={addProductToCart}></Cart>
             </div>
         </div>
     );

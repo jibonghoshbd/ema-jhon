@@ -6,4 +6,5 @@
 .product-container {
     border-right: 1px solid lightgray;
     margin-left: 5rem;
+    padding: 5px;
 }
