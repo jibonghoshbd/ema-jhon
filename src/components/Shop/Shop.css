@@ -1,6 +1,7 @@
 .shop-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    background-color: #e9dede1f;
 }
 
 .product-container {
