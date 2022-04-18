@@ -1,0 +1,27 @@
+.product {
+    display: flex;
+}
+
+.product-ditels {
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.product-name {
+    color: blue;
+    font-weight: 500;
+}
+
+.product-ditels p {
+    font-weight: bold;
+}
+
+.btn-regural {
+    background-color: goldenrod;
+    border: 1px solid lightgray;
+    padding: .5rem 3rem;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
