@@ -28,3 +28,16 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+.icon-color {
+    color: goldenrod;
+}
+
+.reating-justify {
+    display: flex;
+    align-items: center;
+}
+
+.reating {
+    margin-left: 2rem;
+}
