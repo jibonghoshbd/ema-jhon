@@ -4,11 +4,18 @@ import './Cart.css';
 const Cart = (props) => {
     const { cart } = props;
 
-    /*   let total = 0;
-      for (const product of cart) {
-          total = total + product.price;
-      } */
-    const total = cart.reduce((previous, product) => (previous + product.price), 0)
+    let totalQuentity = 0;
+    let total = 0;
+    for (const product of cart) {
+        if (!product.quantity) {
+            product.quantity = 1;
+        }
+        total = total + product.price * product.quantity;
+        totalQuentity = totalQuentity + product.quantity;
+    }
+
+    /*  const totalQuentity = cart.reduce((previous, product) => (previous + product.quantity), 0);
+     const total = cart.reduce((previous, product) => (previous + product.price), 0); */
 
     let shippingCost;
     if (total === 0) {
@@ -22,7 +29,7 @@ const Cart = (props) => {
     return (
         <div className='cart'>
             <h1>Order Summary</h1>
-            <h3>Items Orders: {props.cart.length} </h3>
+            <h3>Items Orders: {totalQuentity} </h3>
             <div className='price-ditels'>
                 <p>Items : ${total.toFixed(2)}</p>
                 <p>Shipping Cost : ${shippingCost.toFixed(2)}</p>
